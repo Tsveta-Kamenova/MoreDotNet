@@ -4,6 +4,8 @@
 
 [![Build status](https://ci.appveyor.com/api/projects/status/41edqunjstgy8vv5?svg=true)](https://ci.appveyor.com/project/Teodor92/moredotnet)
 
+[![BCH compliance](https://bettercodehub.com/edge/badge/Teodor92/MoreDotNet)](https://bettercodehub.com/)
+
 [![NuGet version](https://badge.fury.io/nu/MoreDotNet.svg)](https://badge.fury.io/nu/MoreDotNet)
 
 
