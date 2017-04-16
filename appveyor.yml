@@ -13,7 +13,7 @@ build:
   project: .\MoreDotNet.sln
   verbosity: minimal
 test_script: 
-    - .\packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:user -target:".\packages\xunit.runner.console.2.2.0\tools\xunit.console.x86.exe" -targetargs:".\test\MoreDotNet.Test\bin\Debug\MoreDotNet.Test.dll -noshadow -appveyor" -excludebyattribute:*.ExcludeFromCodeCoverage* -hideskipped:All -output:.\MoreDotNet_coverage.xml
+    - .\packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:user -target:".\packages\xunit.runner.console.2.2.0\tools\xunit.console.x86.exe" -targetargs:".\test\MoreDotNet.Test\bin\Release\MoreDotNet.Test.dll -noshadow -appveyor" -excludebyattribute:*.ExcludeFromCodeCoverage* -hideskipped:All -output:.\MoreDotNet_coverage.xml
     - "SET PATH=C:\\Python34;C:\\Python34\\Scripts;%PATH%"
     - pip install codecov
-    - codecov -f "MyProject_coverage.xml"
+    - codecov -f "MoreDotNet_coverage.xml"
