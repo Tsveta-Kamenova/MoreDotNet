@@ -8,6 +8,8 @@
 
 [![NuGet version](https://badge.fury.io/nu/MoreDotNet.svg)](https://badge.fury.io/nu/MoreDotNet)
 
+[![codecov](https://codecov.io/gh/Teodor92/MoreDotNet/branch/master/graph/badge.svg)](https://codecov.io/gh/Teodor92/MoreDotNet)
+
 
 ## Summary
 
