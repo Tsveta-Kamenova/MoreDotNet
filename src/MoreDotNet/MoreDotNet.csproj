@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="OpenCover" Version="4.6.519" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.0.0" />
     <PackageReference Include="System.ComponentModel.Annotations" Version="4.4.0-preview1-25305-02" />
     <PackageReference Include="System.ComponentModel.Primitives" Version="4.3.0" />
