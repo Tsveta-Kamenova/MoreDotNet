@@ -161,7 +161,13 @@
                 throw new ArgumentNullException(nameof(random));
             }
 
-            return DateTime.FromOADate(random.NextDouble(minValue.ToOADate(), maxValue.ToOADate()));
+            if (minValue > maxValue)
+            {
+                throw new ArgumentException("Min value must not be greater than max value.", nameof(minValue));
+            }
+
+            var range = (maxValue - minValue).Days;
+            return minValue.AddDays(random.Next(range));
         }
 
         /// <summary>

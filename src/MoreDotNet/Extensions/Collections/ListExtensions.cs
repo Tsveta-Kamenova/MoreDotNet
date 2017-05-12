@@ -2,7 +2,6 @@
 {
     using System;
     using System.Collections.Generic;
-    using System.Data;
     using System.Reflection;
 
     using MoreDotNet.Extensions.Common;
@@ -65,43 +64,44 @@
             throw new InvalidOperationException("Item not found");
         }
 
-        /// <summary>
-        /// Convert a List{T} to a DataTable.
-        /// </summary>
-        /// <typeparam name="T">The item type of the <see cref="IList{T}"/></typeparam>
-        /// <param name="list">The <see cref="IList{T}"/> instance on which the extension method is called.</param>
-        /// <returns>A <see cref="DataTable"/> with the contents of the <see cref="IList{T}"/></returns>
-        public static DataTable ToDataTable<T>(this IList<T> list)
-        {
-            if (list == null)
-            {
-                throw new ArgumentNullException(nameof(list));
-            }
+        // TODO: Add when .net standard 2 is out
+        /////// <summary>
+        /////// Convert a List{T} to a DataTable.
+        /////// </summary>
+        /////// <typeparam name="T">The item type of the <see cref="IList{T}"/></typeparam>
+        /////// <param name="list">The <see cref="IList{T}"/> instance on which the extension method is called.</param>
+        /////// <returns>A <see cref="DataTable"/> with the contents of the <see cref="IList{T}"/></returns>
+        ////public static DataTable ToDataTable<T>(this IList<T> list)
+        ////{
+        ////    if (list == null)
+        ////    {
+        ////        throw new ArgumentNullException(nameof(list));
+        ////    }
 
-            var tb = new DataTable(typeof(T).Name);
+        ////    var tb = new DataTable(typeof(T).Name);
 
-            PropertyInfo[] props = typeof(T).GetProperties(BindingFlags.Public | BindingFlags.Instance);
+        ////    PropertyInfo[] props = typeof(T).GetProperties(BindingFlags.Public | BindingFlags.Instance);
 
-            foreach (PropertyInfo prop in props)
-            {
-                Type t = prop.PropertyType.GetCoreType();
-                tb.Columns.Add(prop.Name, t);
-            }
+        ////    foreach (PropertyInfo prop in props)
+        ////    {
+        ////        Type t = prop.PropertyType.GetCoreType();
+        ////        tb.Columns.Add(prop.Name, t);
+        ////    }
 
-            foreach (T item in list)
-            {
-                var values = new object[props.Length];
+        ////    foreach (T item in list)
+        ////    {
+        ////        var values = new object[props.Length];
 
-                for (int i = 0; i < props.Length; i++)
-                {
-                    values[i] = props[i].GetValue(item, null);
-                }
+        ////        for (int i = 0; i < props.Length; i++)
+        ////        {
+        ////            values[i] = props[i].GetValue(item, null);
+        ////        }
 
-                tb.Rows.Add(values);
-            }
+        ////        tb.Rows.Add(values);
+        ////    }
 
-            return tb;
-        }
+        ////    return tb;
+        ////}
 
         /// <summary>
         /// Performs an insertion sort on this list.

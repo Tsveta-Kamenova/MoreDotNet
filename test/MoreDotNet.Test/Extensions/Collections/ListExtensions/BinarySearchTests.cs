@@ -14,7 +14,7 @@
         {
             IList<string> testList = null;
             Assert.Throws<ArgumentNullException>(
-                () => testList.BinarySearch(x => { return x; }, null));
+                () => testList.BinarySearch(x => x, null));
         }
 
         [Fact]

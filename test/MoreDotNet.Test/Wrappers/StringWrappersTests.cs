@@ -64,23 +64,5 @@
             var actual = input.IsNullOrEmpty();
             Assert.Equal(expected, actual);
         }
-
-        [Theory]
-        [MemberData(nameof(RandomString))]
-        public void IsInterned_GivenRandomInput_ShouldHaveSameBehavior(string input)
-        {
-            var expected = string.IsInterned(input);
-            var actual = input.IsInterned();
-            Assert.Equal(expected, actual);
-        }
-
-        [Theory]
-        [MemberData(nameof(RandomString))]
-        public void Intern_GivenRandomInput_ShouldHaveSameBehavior(string input)
-        {
-            var expected = string.Intern(input);
-            var actual = input.Intern();
-            Assert.Equal(expected, actual);
-        }
     }
 }

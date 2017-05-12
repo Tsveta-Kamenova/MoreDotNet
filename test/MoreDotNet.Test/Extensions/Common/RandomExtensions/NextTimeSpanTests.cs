@@ -40,7 +40,7 @@
                 dates.Add(random.NextTimeSpan());
             }
 
-            Assert.True(dates.Count() >= (NumberOfTests * 99 / 100));
+            Assert.True(dates.Count >= (NumberOfTests * 99 / 100));
         }
 
         [Fact]

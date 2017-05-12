@@ -1,6 +1,6 @@
 ﻿namespace MoreDotNet.Test.Extensions.Common.ConvertibleExtensions
 {
-    using System.Drawing;
+    using System;
 
     using MoreDotNet.Extensions.Common;
 
@@ -14,7 +14,7 @@
         public void ToOrOther_ConversionSucceeded_ShouldChangeTheObjectType()
         {
             var value = 10;
-            var result = value.ToOrOther<string>(Other);
+            var result = value.ToOrOther(Other);
 
             Assert.IsType(typeof(string), result);
             Assert.Equal("10", result);
@@ -24,10 +24,11 @@
         public void ToOrOther_ConversionFails_ShouldReturnOtherValue()
         {
             var value = 10;
-            var result = value.ToOrOther<Color>(Color.Chartreuse);
+            var testValue = new DateTime(2000, 2, 2);
+            var result = value.ToOrOther(testValue);
 
-            Assert.IsType(typeof(Color), result);
-            Assert.Equal(Color.Chartreuse, result);
+            Assert.IsType(typeof(DateTime), result);
+            Assert.Equal(testValue, result);
         }
 
         [Fact]
@@ -35,7 +36,7 @@
         {
             var value = 10;
             string newValue;
-            var result = value.ToOrOther<string>(out newValue, Other);
+            var result = value.ToOrOther(out newValue, Other);
 
             Assert.True(result);
             Assert.IsType(typeof(string), newValue);
@@ -46,12 +47,13 @@
         public void ToOrOther_WithOutParam_ConversionFails_ShouldReturnDefaultOfT()
         {
             var value = 10;
-            Color newValue;
-            var result = value.ToOrOther<Color>(out newValue, Color.BurlyWood);
+            
+            var testValue = new DateTime(2000, 2, 2);
+            var result = value.ToOrOther(out DateTime output, testValue);
 
             Assert.False(result);
-            Assert.IsType(typeof(Color), newValue);
-            Assert.Equal(Color.BurlyWood, newValue);
+            Assert.IsType(typeof(DateTime), output);
+            Assert.Equal(testValue, output);
         }
     }
 }

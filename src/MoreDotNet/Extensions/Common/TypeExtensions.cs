@@ -1,6 +1,7 @@
 ﻿namespace MoreDotNet.Extensions.Common
 {
     using System;
+    using System.Reflection;
 
     /// <summary>
     /// <see cref="Type"/> extensions.
@@ -19,7 +20,8 @@
                 throw new ArgumentNullException(nameof(input));
             }
 
-            return !input.IsValueType || (input.IsGenericType && input.GetGenericTypeDefinition() == typeof(Nullable<>));
+            return !input.GetTypeInfo().IsValueType || 
+                (input.GetTypeInfo().IsGenericType && input.GetGenericTypeDefinition() == typeof(Nullable<>));
         }
 
         /// <summary>
@@ -36,7 +38,7 @@
 
             if (IsNullable(input))
             {
-                if (!input.IsValueType)
+                if (!input.GetTypeInfo().IsValueType)
                 {
                     return input;
                 }

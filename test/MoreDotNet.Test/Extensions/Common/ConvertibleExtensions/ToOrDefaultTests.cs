@@ -1,6 +1,6 @@
 ﻿namespace MoreDotNet.Test.Extensions.Common.ConvertibleExtensions
 {
-    using System.Drawing;
+    using System;
 
     using MoreDotNet.Extensions.Common;
 
@@ -22,10 +22,10 @@
         public void ToOrDefault_ConversionFails_ShouldReturnDefaultOfT()
         {
             var value = 10;
-            var result = value.ToOrDefault<Color>();
+            var result = value.ToOrDefault<DateTime>();
 
-            Assert.IsType(typeof(Color), result);
-            Assert.Equal(default(Color), result);
+            Assert.IsType(typeof(DateTime), result);
+            Assert.Equal(default(DateTime), result);
         }
 
         [Fact]
@@ -44,12 +44,12 @@
         public void ToOrDefault_WithOutParam_ConversionFails_ShouldReturnDefaultOfT()
         {
             var value = 10;
-            Color newValue;
-            var result = value.ToOrDefault<Color>(out newValue);
+            DateTime newValue;
+            var result = value.ToOrDefault(out newValue);
 
             Assert.False(result);
-            Assert.IsType(typeof(Color), newValue);
-            Assert.Equal(default(Color), newValue);
+            Assert.IsType(typeof(DateTime), newValue);
+            Assert.Equal(default(DateTime), newValue);
         }
     }
 }

@@ -14,11 +14,6 @@
             return decimal.Floor(input);
         }
 
-        public static long ToOaCurrency(this decimal input)
-        {
-            return decimal.ToOACurrency(input);
-        }
-
         public static byte ToByte(this decimal input)
         {
             return decimal.ToByte(input);
@@ -72,27 +67,6 @@
         public static int[] GetBits(this decimal input)
         {
             return decimal.GetBits(input);
-        }
-
-        public static decimal Round(this decimal input)
-        {
-            return decimal.Round(input);
-        }
-
-        ////// Unuseable
-        ////public static decimal Round(this decimal input, int decimals)
-        ////{
-        ////    return decimal.Round(input, decimals);
-        ////}
-
-        public static decimal Round(this decimal input, MidpointRounding mode, int decimals)
-        {
-            return decimal.Round(input, decimals, mode);
-        }
-
-        public static decimal Round(this decimal input, MidpointRounding mode)
-        {
-            return decimal.Round(input, mode);
         }
 
         public static decimal Truncate(this decimal input)

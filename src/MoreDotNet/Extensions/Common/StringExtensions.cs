@@ -19,16 +19,14 @@
         /// <returns>The string in title case.</returns>
         public static string ToTitleCase(this string input)
         {
-            if (input == null)
+            var tokens = input.Split(new[] { " " }, StringSplitOptions.RemoveEmptyEntries);
+            for (var i = 0; i < tokens.Length; i++)
             {
-                return null;
+                var token = tokens[i];
+                tokens[i] = token.Substring(0, 1).ToUpper() + token.Substring(1).ToLower();
             }
 
-            var cultureInfo = Thread.CurrentThread.CurrentCulture;
-            var textInfo = cultureInfo.TextInfo;
-
-            // TextInfo.ToTitleCase only operates on the string if is all lower case, otherwise it returns the string unchanged.
-            return textInfo.ToTitleCase(input);
+            return string.Join(" ", tokens);
         }
 
         /// <summary>
@@ -65,8 +63,8 @@
             }
 
             return input[0]
-                .ToString(CultureInfo.InvariantCulture)
-                .ToUpper(CultureInfo.InvariantCulture) + input.Substring(1);
+                .ToString()
+                .ToUpper() + input.Substring(1);
         }
 
         /// <summary>
@@ -249,25 +247,5 @@
 
             return input.Substring(number);
         }
-
-        ////// TODO: Test!
-        ////public static bool IsValue<T>(this string input)
-        ////{
-        ////    T temp;
-
-        ////    var type = typeof(T);
-        ////    var converter = TypeDescriptor.GetConverter(type);
-
-        ////    try
-        ////    {
-        ////        converter.ConvertFromInvariantString(input);
-        ////    }
-        ////    catch (Exception)
-        ////    {
-        ////        return false;
-        ////    }
-
-        ////    return true;
-        ////}
     }
 }

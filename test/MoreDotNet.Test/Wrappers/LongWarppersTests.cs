@@ -23,14 +23,5 @@
                 return result;
             }
         }
-
-        [Theory]
-        [MemberData(nameof(RandomLongs))]
-        public void FromOaCurrency_GivenRandomInput_ShouldHaveSameBehavior(long input)
-        {
-            var expected = decimal.FromOACurrency(input);
-            var actual = input.FromOaCurrency();
-            Assert.Equal(expected, actual);
-        }
     }
 }

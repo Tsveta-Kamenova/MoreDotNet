@@ -82,7 +82,7 @@
 
             foreach (var key in dictionary.Keys)
             {
-                if (key.Equals(caseInsensitiveKey, StringComparison.InvariantCultureIgnoreCase))
+                if (key.Equals(caseInsensitiveKey, StringComparison.CurrentCultureIgnoreCase))
                 {
                     return key;
                 }

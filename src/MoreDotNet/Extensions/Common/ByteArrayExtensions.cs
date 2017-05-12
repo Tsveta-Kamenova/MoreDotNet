@@ -18,8 +18,7 @@
                 return string.Empty;
             }
 
-            // ANSI as default
-            var encoding = Encoding.Default;
+            var encoding = Encoding.UTF8;
 
             /*
                 EF BB BF UTF-8

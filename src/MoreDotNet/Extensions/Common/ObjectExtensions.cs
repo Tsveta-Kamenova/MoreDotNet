@@ -1,6 +1,7 @@
 ﻿namespace MoreDotNet.Extensions.Common
 {
     using System;
+    using System.Reflection;
     using System.Collections.Generic;
     using System.Linq;
 
@@ -64,7 +65,7 @@
 
             return item
                 .GetType()
-                .GetProperties()
+                .GetRuntimeProperties()
                 .Where(propertyInfo => propertyInfo.GetIndexParameters().Length == 0)
                 .ToDictionary(propertyInfo => propertyInfo.Name, propertyInfo => propertyInfo.GetValue(item, null));
         }

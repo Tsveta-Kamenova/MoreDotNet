@@ -40,8 +40,8 @@
         [MemberData(nameof(RandomChars))]
         public void ToLowerEncoding_GivenRandomInput_ShouldHaveSameBehavior(char input)
         {
-            var expected = char.ToLower(input, CultureInfo.InvariantCulture);
-            var actual = input.ToLower(CultureInfo.InvariantCulture);
+            var expected = char.ToLower(input);
+            var actual = input.ToLower();
             Assert.Equal(expected, actual);
         }
 
@@ -49,8 +49,8 @@
         [MemberData(nameof(RandomChars))]
         public void ToUpperEncoding_GivenRandomInput_ShouldHaveSameBehavior(char input)
         {
-            var expected = char.ToUpper(input, CultureInfo.InvariantCulture);
-            var actual = input.ToUpper(CultureInfo.InvariantCulture);
+            var expected = char.ToUpper(input);
+            var actual = input.ToUpper();
             Assert.Equal(expected, actual);
         }
 
@@ -213,15 +213,6 @@
         {
             var expected = char.GetNumericValue(input);
             var actual = input.GetNumericValue();
-            Assert.Equal(expected, actual);
-        }
-
-        [Theory]
-        [MemberData(nameof(RandomChars))]
-        public void GetUnicodeCategory_GivenRandomInput_ShouldHaveSameBehavior(char input)
-        {
-            var expected = char.GetUnicodeCategory(input);
-            var actual = input.GetUnicodeCategory();
             Assert.Equal(expected, actual);
         }
     }

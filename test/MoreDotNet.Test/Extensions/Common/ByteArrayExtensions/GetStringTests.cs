@@ -84,7 +84,7 @@
         [Fact]
         public void GetString_ANSI_Specified_ShouldReturnProperString()
         {
-            var buffer = GetBytesWithPreamble(Encoding.Default, "More Dot Net");
+            var buffer = GetBytesWithPreamble(Encoding.UTF8, "More Dot Net");
             var result = buffer.GetString();
 
             Assert.Equal(result, "More Dot Net");

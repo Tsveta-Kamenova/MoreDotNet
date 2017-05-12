@@ -44,15 +44,6 @@
 
         [Theory]
         [MemberData(nameof(RandomDecimals))]
-        public void ToOaCurrency_GivenRandomInput_ShouldHaveSameBehavior(decimal input)
-        {
-            var expected = decimal.ToOACurrency(input);
-            var actual = input.ToOaCurrency();
-            Assert.Equal(expected, actual);
-        }
-
-        [Theory]
-        [MemberData(nameof(RandomDecimals))]
         public void ToByte_GivenRandomInput_ShouldHaveSameBehavior(decimal input)
         {
             var expected = decimal.ToByte(input);
@@ -147,51 +138,6 @@
         {
             var expected = decimal.GetBits(input);
             var actual = input.GetBits();
-            Assert.Equal(expected, actual);
-        }
-
-        [Theory]
-        [MemberData(nameof(RandomDecimals))]
-        public void Round_GivenRandomInput_ShouldHaveSameBehavior(decimal input)
-        {
-            var expected = decimal.Round(input);
-            var actual = input.Round();
-            Assert.Equal(expected, actual);
-        }
-
-        [Theory]
-        [MemberData(nameof(RandomDecimals))]
-        public void RoundDecimals_GivenRandomInputAndMidpointAwayFromZero_ShouldHaveSameBehavior(decimal input)
-        {
-            var expected = decimal.Round(input, 1, MidpointRounding.AwayFromZero);
-            var actual = input.Round(MidpointRounding.AwayFromZero, 1);
-            Assert.Equal(expected, actual);
-        }
-
-        [Theory]
-        [MemberData(nameof(RandomDecimals))]
-        public void RoundDecimals_GivenRandomInputAndMidpointToEven_ShouldHaveSameBehavior(decimal input)
-        {
-            var expected = decimal.Round(input, 1, MidpointRounding.ToEven);
-            var actual = input.Round(MidpointRounding.ToEven, 1);
-            Assert.Equal(expected, actual);
-        }
-
-        [Theory]
-        [MemberData(nameof(RandomDecimals))]
-        public void Round_GivenRandomInputAndMidpointAwayFromZero_ShouldHaveSameBehavior(decimal input)
-        {
-            var expected = decimal.Round(input, MidpointRounding.AwayFromZero);
-            var actual = input.Round(MidpointRounding.AwayFromZero);
-            Assert.Equal(expected, actual);
-        }
-
-        [Theory]
-        [MemberData(nameof(RandomDecimals))]
-        public void Round_GivenRandomInputAndMidpointToEven_ShouldHaveSameBehavior(decimal input)
-        {
-            var expected = decimal.Round(input, MidpointRounding.ToEven);
-            var actual = input.Round(MidpointRounding.ToEven);
             Assert.Equal(expected, actual);
         }
 

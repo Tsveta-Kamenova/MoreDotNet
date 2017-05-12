@@ -9,11 +9,6 @@
             return char.ToLower(input);
         }
 
-        public static char ToLower(this char input, CultureInfo cultureInfo)
-        {
-            return char.ToLower(input, cultureInfo);
-        }
-
         public static char ToLowerInvariant(this char input)
         {
             return char.ToLowerInvariant(input);
@@ -22,11 +17,6 @@
         public static char ToUpper(this char input)
         {
             return char.ToUpper(input);
-        }
-
-        public static char ToUpper(this char input, CultureInfo cultureInfo)
-        {
-            return char.ToUpper(input, cultureInfo);
         }
 
         public static char ToUpperInvariant(this char input)
@@ -107,11 +97,6 @@
         public static double GetNumericValue(this char input)
         {
             return char.GetNumericValue(input);
-        }
-
-        public static UnicodeCategory GetUnicodeCategory(this char input)
-        {
-            return char.GetUnicodeCategory(input);
         }
     }
 }

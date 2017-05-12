@@ -11,15 +11,5 @@
         {
             return string.IsNullOrEmpty(s);
         }
-
-        public static string IsInterned(this string s)
-        {
-            return string.IsInterned(s);
-        }
-
-        public static string Intern(this string s)
-        {
-            return string.Intern(s);
-        }
     }
 }
