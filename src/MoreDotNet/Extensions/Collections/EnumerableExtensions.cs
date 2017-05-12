@@ -146,6 +146,17 @@
             return source == null || !source.Any();
         }
 
+        /// <summary>
+        /// Converst and <see cref="IEnumerable{T}"/> to a <see cref="HashSet{T}"/>
+        /// </summary>
+        /// <typeparam name="T">The item type of the items enumeration.</typeparam>
+        /// <param name="source">The <see cref="IEnumerable{T}"/> instance on which the extension method is called.</param>
+        /// <returns>The converted <see cref="HashSet{T}"/>.</returns>
+        public static HashSet<T> ToHashSet<T>(this IEnumerable<T> source)
+        {
+            return new HashSet<T>(source);
+        }
+
         private static IEnumerable<T> ShuffleIterator<T>(this IEnumerable<T> items, Random rng)
         {
             var buffer = items.ToList();
