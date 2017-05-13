@@ -32,6 +32,7 @@ EmptyIfNull()
 Shuffle()
 ToString()
 IsNullOrEmpty()
+ToHashSet()
 ```
 
 * IList:
