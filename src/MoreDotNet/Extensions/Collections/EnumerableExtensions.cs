@@ -13,7 +13,7 @@
         /// <summary>
         /// Executes an <see cref="Action{T}"/> on every element of the <paramref name="items"/>.
         /// </summary>
-        /// <typeparam name="T">The item type of the <see cref="items"/>.</typeparam>
+        /// <typeparam name="T">The item type of the items enumeration.</typeparam>
         /// <param name="items">The <see cref="IEnumerable{T}"/> instance on which the extension method is called.</param>
         /// <param name="mapFunction">The action to be executed.</param>
         public static void ForEach<T>(this IEnumerable<T> items, Action<T> mapFunction)

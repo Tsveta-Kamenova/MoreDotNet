@@ -2,12 +2,25 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.5</TargetFramework>
+    <CodeAnalysisRuleSet>..\..\visual-studio-analyzers.ruleset</CodeAnalysisRuleSet>
+    <PackageId>MoreDotNet.Teodor_Kurtev</PackageId>
+    <PackageVersion>0.7.0</PackageVersion>
+    <Authors>Teodor Kurtev</Authors>
+    <Description>A combination of helpful extension methods.</Description>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageReleaseNotes>Version 0.7 drops some APIs in order to be .NET Standard compliant. Please see the projects GitHub page for more info.</PackageReleaseNotes>
+    <Copyright>Code by Teodor Kurtev. Copyright 2017 Teodor Kurtev.</Copyright>
+    <PackageTags>extensions helpers</PackageTags>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netstandard1.5\MoreDotNet.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="OpenCover" Version="4.6.519" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.0.0" />
-    <PackageReference Include="System.ComponentModel.Annotations" Version="4.4.0-preview1-25305-02" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.3.0" />
     <PackageReference Include="System.ComponentModel.Primitives" Version="4.3.0" />
     <PackageReference Include="System.Xml.XmlSerializer" Version="4.3.0" />
   </ItemGroup>

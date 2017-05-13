@@ -17,7 +17,7 @@
         /// <param name="dictionary">The <see cref="IDictionary{TKey,TValue}"/> instance on which the extension method is called.</param>
         /// <param name="key">The key we are searching for.</param>
         /// <returns>
-        /// The associated value with the given <paramref name="key"/> or if the key does not exists - the default value of <see cref="TValue"/>
+        /// The associated value with the given <paramref name="key"/> or if the key does not exists - the default value of generic value type.
         /// </returns>
         public static TValue GetOrDefault<TKey, TValue>(this IDictionary<TKey, TValue> dictionary, TKey key)
         {

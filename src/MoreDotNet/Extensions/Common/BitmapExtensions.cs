@@ -4,9 +4,9 @@
     ////using System.Drawing;
     ////using System.Drawing.Imaging;
 
-    /// <summary>
-    /// <see cref="Bitmap"/> extensions.
-    /// </summary>
+    ///// <summary>
+    ///// <see cref="Bitmap"/> extensions.
+    ///// </summary>
     public static class BitmapExtensions
     {
         /////// <summary>

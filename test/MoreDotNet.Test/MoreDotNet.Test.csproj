@@ -2,6 +2,11 @@
 
   <PropertyGroup>    
     <TargetFramework>netcoreapp1.1</TargetFramework>
+    <CodeAnalysisRuleSet>..\..\visual-studio-analyzers.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netcoreapp1.1\MoreDotNet.Test.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
