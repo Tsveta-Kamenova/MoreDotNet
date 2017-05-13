@@ -43,11 +43,6 @@ InsertWhere()
 RemoveAll()
 ```
 
-* Bitmap:
-```cs 
-ToGrayScale()
-```
-
 * bool:
 ```cs 
 WhenTrue()
@@ -57,14 +52,6 @@ WhenFalse()
 * ByteArray:
 ```cs 
 GetString()
-```
-
-* Color:
-```cs 
-ToHexString()
-ToRgbString()
-ToGray()
-ToReadableForegroundColor()
 ```
 
 * IConvertible:
@@ -214,6 +201,12 @@ You can install the library using NuGet into your project:
 ```
 Install-Package MoreDotNet
 ```
+
+## Changelog
+
+## Version 0.7
+- Switched to .NET Standard.
+- APIs for Color, OperatingSystem and DataTable removed due to them missing in the .NET Standard API.
 
 ## License
 
