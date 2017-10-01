@@ -139,22 +139,27 @@
         /// Checks if the <see cref="IEnumerable{T}"/> is null or empty
         /// </summary>
         /// <typeparam name="T">The item type of the items enumeration.</typeparam>
-        /// <param name="source">The <see cref="IEnumerable{T}"/> instance on which the extension method is called.</param>
+        /// <param name="items">The <see cref="IEnumerable{T}"/> instance on which the extension method is called.</param>
         /// <returns>True if the collection is null or empty, false otherwise.</returns>
-        public static bool IsNullOrEmpty<T>(this IEnumerable<T> source)
+        public static bool IsNullOrEmpty<T>(this IEnumerable<T> items)
         {
-            return source == null || !source.Any();
+            return items == null || !items.Any();
         }
 
         /// <summary>
         /// Converst and <see cref="IEnumerable{T}"/> to a <see cref="HashSet{T}"/>
         /// </summary>
         /// <typeparam name="T">The item type of the items enumeration.</typeparam>
-        /// <param name="source">The <see cref="IEnumerable{T}"/> instance on which the extension method is called.</param>
+        /// <param name="items">The <see cref="IEnumerable{T}"/> instance on which the extension method is called.</param>
         /// <returns>The converted <see cref="HashSet{T}"/>.</returns>
-        public static HashSet<T> ToHashSet<T>(this IEnumerable<T> source)
+        public static HashSet<T> ToHashSet<T>(this IEnumerable<T> items)
         {
-            return new HashSet<T>(source);
+            if (items == null)
+            {
+                throw new ArgumentNullException(nameof(items));
+            }
+
+            return new HashSet<T>(items);
         }
 
         private static IEnumerable<T> ShuffleIterator<T>(this IEnumerable<T> items, Random rng)
