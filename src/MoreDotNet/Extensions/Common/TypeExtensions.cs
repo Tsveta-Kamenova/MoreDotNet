@@ -20,7 +20,7 @@
                 throw new ArgumentNullException(nameof(input));
             }
 
-            return !input.GetTypeInfo().IsValueType || 
+            return !input.GetTypeInfo().IsValueType ||
                 (input.GetTypeInfo().IsGenericType && input.GetGenericTypeDefinition() == typeof(Nullable<>));
         }
 
