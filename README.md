@@ -4,6 +4,8 @@
 
 [![NuGet version](https://badge.fury.io/nu/MoreDotNet.svg)](https://badge.fury.io/nu/MoreDotNet)
 
+[![Build Status](https://travis-ci.org/Teodor92/MoreDotNet.svg?branch=master)](https://travis-ci.org/Teodor92/MoreDotNet)
+
 ## Summary
 
 This project is a collection of handy extension methods for the .NET Framework. The functionality of this package can be separated in the following groups:
