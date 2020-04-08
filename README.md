@@ -2,7 +2,7 @@
 
 ## Status
 
-[![Build status](https://ci.appveyor.com/api/projects/status/41edqunjstgy8vv5?svg=true)](https://ci.appveyor.com/project/Teodor92/moredotnet) [![BCH compliance](https://bettercodehub.com/edge/badge/Teodor92/MoreDotNet)](https://bettercodehub.com/) [![NuGet version](https://badge.fury.io/nu/MoreDotNet.svg)](https://badge.fury.io/nu/MoreDotNet) [![codecov](https://codecov.io/gh/Teodor92/MoreDotNet/branch/master/graph/badge.svg)](https://codecov.io/gh/Teodor92/MoreDotNet)
+[![NuGet version](https://badge.fury.io/nu/MoreDotNet.svg)](https://badge.fury.io/nu/MoreDotNet)
 
 
 ## Summary
