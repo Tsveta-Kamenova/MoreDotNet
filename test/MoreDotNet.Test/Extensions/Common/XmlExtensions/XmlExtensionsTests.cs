@@ -26,7 +26,7 @@
             var modelSerialized = testObject.XmlSerialize();
 
             Assert.NotNull(modelSerialized);
-            Assert.NotEqual(modelSerialized.Length, 0);
+            Assert.NotEqual(0, modelSerialized.Length);
 
             using (var stringReader = new StringReader(modelSerialized))
             {

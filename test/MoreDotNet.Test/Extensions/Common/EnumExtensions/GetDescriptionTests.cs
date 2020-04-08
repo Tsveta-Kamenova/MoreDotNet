@@ -16,14 +16,14 @@
             [Description("This is the second value")]
             One = 1,
             [Description("This is the third value")]
-            Two = 2
+            Two = 2,
         }
 
         private enum TestEnumWithoutDescription
         {
             Default = 0,
             One = 1,
-            Two = 2
+            Two = 2,
         }
 
         [Fact]

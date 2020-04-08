@@ -16,7 +16,7 @@
             var value = 10;
             var result = value.ToOrOther(Other);
 
-            Assert.IsType(typeof(string), result);
+            Assert.IsType<string>(result);
             Assert.Equal("10", result);
         }
 
@@ -27,7 +27,7 @@
             var testValue = new DateTime(2000, 2, 2);
             var result = value.ToOrOther(testValue);
 
-            Assert.IsType(typeof(DateTime), result);
+            Assert.IsType<DateTime>(result);
             Assert.Equal(testValue, result);
         }
 
@@ -39,7 +39,7 @@
             var result = value.ToOrOther(out newValue, Other);
 
             Assert.True(result);
-            Assert.IsType(typeof(string), newValue);
+            Assert.IsType<string>(newValue);
             Assert.Equal("10", newValue);
         }
 
@@ -47,12 +47,11 @@
         public void ToOrOther_WithOutParam_ConversionFails_ShouldReturnDefaultOfT()
         {
             var value = 10;
-            
             var testValue = new DateTime(2000, 2, 2);
             var result = value.ToOrOther(out DateTime output, testValue);
 
             Assert.False(result);
-            Assert.IsType(typeof(DateTime), output);
+            Assert.IsType<DateTime>(output);
             Assert.Equal(testValue, output);
         }
     }

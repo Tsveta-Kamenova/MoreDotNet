@@ -12,7 +12,7 @@
             var value = 10;
             var result = value.To<string>();
 
-            Assert.IsType(typeof(string), result);
+            Assert.IsType<string>(result);
             Assert.Equal("10", result);
         }
     }

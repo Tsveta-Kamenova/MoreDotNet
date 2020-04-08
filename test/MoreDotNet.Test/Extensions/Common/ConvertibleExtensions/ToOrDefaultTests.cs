@@ -14,7 +14,7 @@
             var value = 10;
             var result = value.ToOrDefault<string>();
 
-            Assert.IsType(typeof(string), result);
+            Assert.IsType<string>(result);
             Assert.Equal("10", result);
         }
 
@@ -24,7 +24,7 @@
             var value = 10;
             var result = value.ToOrDefault<DateTime>();
 
-            Assert.IsType(typeof(DateTime), result);
+            Assert.IsType<DateTime>(result);
             Assert.Equal(default(DateTime), result);
         }
 
@@ -36,7 +36,7 @@
             var result = value.ToOrDefault<string>(out newValue);
 
             Assert.True(result);
-            Assert.IsType(typeof(string), newValue);
+            Assert.IsType<string>(newValue);
             Assert.Equal("10", newValue);
         }
 
@@ -48,7 +48,7 @@
             var result = value.ToOrDefault(out newValue);
 
             Assert.False(result);
-            Assert.IsType(typeof(DateTime), newValue);
+            Assert.IsType<DateTime>(newValue);
             Assert.Equal(default(DateTime), newValue);
         }
     }

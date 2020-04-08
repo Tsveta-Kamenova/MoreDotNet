@@ -33,7 +33,7 @@
             var buffer = GetBytesWithPreamble(Encoding.UTF8, "More Dot Net");
             var result = buffer.GetString();
 
-            Assert.Equal(result, "More Dot Net");
+            Assert.Equal("More Dot Net", result);
         }
 
         [Fact]
@@ -42,7 +42,7 @@
             var buffer = GetBytesWithPreamble(Encoding.Unicode, "More Dot Net");
             var result = buffer.GetString();
 
-            Assert.Equal(result, "More Dot Net");
+            Assert.Equal("More Dot Net", result);
         }
 
         [Fact]
@@ -51,7 +51,7 @@
             var buffer = GetBytesWithPreamble(Encoding.BigEndianUnicode, "More Dot Net");
             var result = buffer.GetString();
 
-            Assert.Equal(result, "More Dot Net");
+            Assert.Equal("More Dot Net", result);
         }
 
         [Fact]
@@ -60,7 +60,7 @@
             var buffer = GetBytesWithPreamble(Encoding.UTF32, "More Dot Net");
             var result = buffer.GetString();
 
-            Assert.Equal(result, "More Dot Net");
+            Assert.Equal("More Dot Net", result);
         }
 
         [Fact]
@@ -69,7 +69,7 @@
             var buffer = GetBytesWithPreamble(new UTF32Encoding(true, true), "More Dot Net");
             var result = buffer.GetString();
 
-            Assert.Equal(result, "More Dot Net");
+            Assert.Equal("More Dot Net", result);
         }
 
         [Fact]
@@ -78,7 +78,7 @@
             var buffer = GetBytesWithPreamble(Encoding.UTF7, "More Dot Net");
             var result = buffer.GetString();
 
-            Assert.Equal(result, "More Dot Net");
+            Assert.Equal("More Dot Net", result);
         }
 
         [Fact]
@@ -87,7 +87,7 @@
             var buffer = GetBytesWithPreamble(Encoding.UTF8, "More Dot Net");
             var result = buffer.GetString();
 
-            Assert.Equal(result, "More Dot Net");
+            Assert.Equal("More Dot Net", result);
         }
 
         [Fact]
@@ -96,7 +96,7 @@
             var buffer = new byte[] { 77, 111, 114, 101, 32, 68, 111, 116, 32, 78, 101, 116 };
             var result = buffer.GetString();
 
-            Assert.Equal(result, "More Dot Net");
+            Assert.Equal("More Dot Net", result);
         }
 
         [Fact]
@@ -105,7 +105,7 @@
             var buffer = new byte[] { 0xff, 0xfe, 0, 0, 77, 0, 111, 0, 97, 0, 114, 0, 101, 0, 32, 0, 68, 0, 111, 0, 116, 0, 32, 0, 78, 0, 101, 0, 116, 0 };
             var result = buffer.GetString();
 
-            Assert.Equal(result, "\0Moare Dot Net");
+            Assert.Equal("\0Moare Dot Net", result);
         }
 
         [Fact]
@@ -114,7 +114,7 @@
             var buffer = GetBytesWithPreamble(Encoding.ASCII, "More Dot Net");
             var result = buffer.GetString();
 
-            Assert.Equal(result, "More Dot Net");
+            Assert.Equal("More Dot Net", result);
         }
 
         private static byte[] GetBytesWithPreamble(Encoding encoding, string data) => encoding.GetPreamble().Concat(encoding.GetBytes(data)).ToArray();

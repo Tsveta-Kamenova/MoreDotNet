@@ -21,7 +21,7 @@
             var input = new Example
             {
                 One = "First",
-                Two = "Second"
+                Two = "Second",
             };
             var result = input.ToDictionary();
 

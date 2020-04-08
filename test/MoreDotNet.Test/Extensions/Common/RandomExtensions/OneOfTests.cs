@@ -33,7 +33,7 @@
             var random = new Random();
             var number = random.OneOf<int>(this.numbersArray);
 
-            Assert.True(this.numbersArray.Contains(number));
+            Assert.Contains(number, this.numbersArray);
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿namespace MoreDotNet.Test.Extensions.Numeric.RomanNumeralExtensions.Base
 {
     using System.Collections.Generic;
+    using System.Linq;
 
     public abstract class RomanNumeralTestBase
     {
@@ -37,8 +38,11 @@
             new object[] { "MVI", 1006 },
             new object[] { "MXXIII", 1023 },
             new object[] { "MMXIV", 2014 },
-            new object[] { "MMMCMXCIX", 3999 }
+            new object[] { "MMMCMXCIX", 3999 },
         };
+
+        public static IEnumerable<object[]> CorrectRomanNumbers => RommanToArrabicNumberMappings
+                .Select((item) => new object[] { item[0] });
 
         public static IEnumerable<object[]> IncorrectRomanNumbers => new List<object[]>
         {
@@ -47,7 +51,7 @@
             new object[] { "IIII" },
             new object[] { "WWW" },
             new object[] { "axXp" },
-            new object[] { "PPPPPP" }
+            new object[] { "PPPPPP" },
         };
     }
 }

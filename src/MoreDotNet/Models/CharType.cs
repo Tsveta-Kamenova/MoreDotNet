@@ -10,6 +10,6 @@
         AlphanumericLower,
         AlphanumericUpper,
         AlphanumericAny,
-        Numeric
+        Numeric,
     }
 }

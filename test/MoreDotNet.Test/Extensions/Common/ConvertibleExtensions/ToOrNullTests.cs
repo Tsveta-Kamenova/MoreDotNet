@@ -12,7 +12,7 @@
             var value = 10;
             var result = value.ToOrNull<string>();
 
-            Assert.IsType(typeof(string), result);
+            Assert.IsType<string>(result);
             Assert.Equal("10", result);
         }
 
@@ -33,7 +33,7 @@
             var result = value.ToOrNull<string>(out newValue);
 
             Assert.True(result);
-            Assert.IsType(typeof(string), newValue);
+            Assert.IsType<string>(newValue);
             Assert.Equal("10", newValue);
         }
 

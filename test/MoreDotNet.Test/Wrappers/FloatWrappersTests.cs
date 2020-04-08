@@ -22,7 +22,7 @@
             var input = new[]
             {
                 float.PositiveInfinity,
-                float.NegativeInfinity
+                float.NegativeInfinity,
             };
 
             foreach (var testInput in input)

@@ -40,7 +40,7 @@
                 typeof(ulong?),
                 typeof(double?),
                 typeof(float?),
-                typeof(decimal?)
+                typeof(decimal?),
             };
 
             foreach (var nullableType in nullableTypes)
@@ -53,7 +53,7 @@
         public void GetCoreType_GivenNonNullableArgument_ShouldReturnSameType()
         {
             var nonNullableTypes = new[]
-{
+            {
                 typeof(byte),
                 typeof(sbyte),
                 typeof(short),
@@ -64,7 +64,7 @@
                 typeof(ulong),
                 typeof(double),
                 typeof(float),
-                typeof(decimal)
+                typeof(decimal),
             };
 
             foreach (var nonNullableType in nonNullableTypes)
@@ -89,7 +89,7 @@
                 new { NullableType = typeof(double?), CoreType = typeof(double) },
                 new { NullableType = typeof(float?), CoreType = typeof(float) },
                 new { NullableType = typeof(decimal?), CoreType = typeof(decimal) },
-                new { NullableType = typeof(Random), CoreType = typeof(Random) }
+                new { NullableType = typeof(Random), CoreType = typeof(Random) },
             };
 
             foreach (var type in nullableTypes)

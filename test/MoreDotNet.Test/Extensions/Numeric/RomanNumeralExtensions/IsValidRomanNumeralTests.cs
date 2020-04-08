@@ -1,7 +1,6 @@
 ﻿namespace MoreDotNet.Test.Extensions.Numeric.RomanNumeralExtensions
 {
     using System;
-    using System.Collections.Generic;
 
     using MoreDotNet.Extensions.Numeric;
     using MoreDotNet.Test.Extensions.Numeric.RomanNumeralExtensions.Base;
@@ -11,8 +10,8 @@
     public class IsValidRomanNumeralTests : RomanNumeralTestBase
     {
         [Theory]
-        [MemberData(nameof(RommanToArrabicNumberMappings))]
-        public void IsValidRomanNumeral_GivenCorrectNumber_ShouldReturnTrue(string romanNumber, int arrabicNumber)
+        [MemberData(nameof(CorrectRomanNumbers))]
+        public void IsValidRomanNumeral_GivenCorrectNumber_ShouldReturnTrue(string romanNumber)
         {
             Assert.True(romanNumber.IsValidRomanNumeral());
         }

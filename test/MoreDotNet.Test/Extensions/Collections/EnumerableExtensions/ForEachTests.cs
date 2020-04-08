@@ -15,7 +15,7 @@
             var actual = new List<int>();
             var input = new[] { 1 };
             input.ForEach((_) => actual.Add(_));
-            Assert.True(actual.Contains(input[0]));
+            Assert.Contains(input[0], actual);
         }
 
         [Fact]

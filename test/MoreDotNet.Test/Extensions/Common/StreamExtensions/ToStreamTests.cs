@@ -20,7 +20,6 @@
         [InlineData(new byte[0])]
         [InlineData(new byte[] { 0, 1, 2, 3, 4, 5 })]
         [InlineData(new byte[] { 0, 255, 4, 123 })]
-        [InlineData(new byte[] { 0, 1, 2, 3, 4, 5 })]
         public void ToStream_OnByteArray_ReturnsCorrectStream(byte[] inputByteArray)
         {
             var expectedStream = new MemoryStream(inputByteArray);
