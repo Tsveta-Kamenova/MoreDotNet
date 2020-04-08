@@ -4,29 +4,30 @@
 
 [![NuGet version](https://badge.fury.io/nu/MoreDotNet.svg)](https://badge.fury.io/nu/MoreDotNet)
 
-
 ## Summary
 
 This project is a collection of handy extension methods for the .NET Framework. The functionality of this package can be separated in the following groups:
 
-#### Extension methods for common .NET types:
+### Extension methods for common .NET types:
+
 ---
 
 * ICollection:
 
-```cs 
-AddRange() 
+```cs
+AddRange()
 ```
 
 * IDictionary:
 
-```cs 
+```cs
 GetOrDefault()
 GetKeyIgnoringCase()
 ```
 
 * IEnumerable:
-```cs 
+
+```cs
 ForEach()
 EmptyIfNull()
 Shuffle()
@@ -36,7 +37,8 @@ ToHashSet()
 ```
 
 * IList:
-```cs 
+
+```cs
 BinarySearch()
 ToDataTable()
 InsertionSort()
@@ -45,18 +47,21 @@ RemoveAll()
 ```
 
 * bool:
-```cs 
+
+```cs
 WhenTrue()
 WhenFalse()
 ```
 
 * ByteArray:
-```cs 
+
+```cs
 GetString()
 ```
 
 * IConvertible:
-```cs 
+
+```cs
 To()
 ToOrDefault()
 ToOrOther()
@@ -64,12 +69,14 @@ ToOrNull()
 ```
 
 * IDataRecord:
-```cs 
+
+```cs
 GetNullable()
 ```
 
 * DateTime:
-```cs 
+
+```cs
 FirstDayOfMonth()
 LastDayOfMonth()
 NextDate()
@@ -84,24 +91,28 @@ NextWorkday()
 ```
 
 * Enum:
-```cs 
+
+```cs
 GetDisplayName()
 GetDescription()
 ```
 
 * Generics
-```cs 
+
+```cs
 IsBetween()
 GetMemberName()
 ```
 
 * int:
-```cs 
+
+```cs
 RangeTo()
 ```
 
 * object:
-```cs 
+
+```cs
 Is()
 IsNot()
 As()
@@ -109,7 +120,8 @@ ToDictionary()
 ```
 
 * OperatingSystem:
-```cs 
+
+```cs
 IsWinXpOrHigher()
 IsWinVistaOrHigher()
 IsWin7OrHigher()
@@ -117,7 +129,8 @@ IsWin8OrHigher()
 ```
 
 * Random:
-```cs 
+
+```cs
 OneOf()
 NextBool()
 NextChar()
@@ -128,13 +141,15 @@ NextTimeSpan()
 ```
 
 * Stream:
-```cs 
+
+```cs
 ToByteArray()
 ToStream()
 ```
 
 * string:
-```cs 
+
+```cs
 ToTitleCase()
 CaseToWords()
 Capitalize()
@@ -148,47 +163,57 @@ RemoveFirst()
 ```
 
 * Type:
-```cs 
+
+```cs
 IsNullable()
 GetCoreType()
 ```
 
 * Xml:
-```cs 
+
+```cs
 XmlSerialize()
 XmlDeserialize()
 ```
 
 * RomanNumeral:
-```cs 
+
+```cs
 IsValidRomanNumeral()
 ParseRomanNumeral()
 ToRomanNumeralString()
 ```
 
-#### Static helpers:
+### Static helpers
+
 ---
 
 * Directory:
-```cs 
+
+```cs
 CreateTempDirectory()
 SafeDeleteDirectory()
 ```
 
 * File:
-```cs 
+
+```cs
 SaveStringToTempFile()
 SaveByteArrayToTempFile()
 ```
 
-#### Wrappers for transforming common static methods to instance methods:
+### Wrappers for transforming common static methods to instance methods
+
 ---
 
 Example:
+
 ```cs
 string.IsNullOrWhiteSpace(testStringVar)
 ```
+
 Is transformed to:
+
 ```cs
 testStringVar.IsNullOrWhiteSpace()
 ```
@@ -199,13 +224,14 @@ NOTE: The package is still under development and some bugs may exist!
 
 You can install the library using NuGet into your project:
 
-```
+```bash
 Install-Package MoreDotNet
 ```
 
 ## Changelog
 
 ## Version 0.7
+
 - Switched to .NET Standard.
 - APIs for Color, OperatingSystem and DataTable removed due to them missing in the .NET Standard API.
 
@@ -213,14 +239,8 @@ Install-Package MoreDotNet
 
 Code by Teodor Kurtev. Copyright 2016 Teodor Kurtev.
 
-This package has MIT license. Refer to the LICENSE for detailed information.
-
-## License
-
-Code by Teodor Kurtev. Copyright 2016 Teodor Kurtev.
-
 This package has MIT license. Refer to the [LICENSE](https://github.com/Teodor92/MoreDotNet/blob/master/LICENSE) for detailed information.
 
-## Any questions, comments or additions?
+## Any questions, comments or additions
 
 If you have a feature request or bug report, leave an issue on the [issues page](https://github.com/Teodor92/MoreDotNet/issues) or send a [pull request](https://github.com/Teodor92/MoreDotNet/pulls). For general questions and comments, use the [StackOverflow](http://stackoverflow.com/) forum.
