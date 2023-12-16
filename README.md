@@ -237,8 +237,6 @@ Install-Package MoreDotNet
 
 ## License
 
-Code by Teodor Kurtev. Copyright 2016 Teodor Kurtev.
-
 This package has MIT license. Refer to the [LICENSE](https://github.com/Teodor92/MoreDotNet/blob/master/LICENSE) for detailed information.
 
 ## Any questions, comments or additions
