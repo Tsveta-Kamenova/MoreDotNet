@@ -7,7 +7,7 @@
     <Authors>Teodor Kurtev</Authors>
     <Description>A combination of helpful extension methods.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <Copyright>Code by Teodor Kurtev. Copyright 2023 Teodor Kurtev.</Copyright>
+    <Copyright>Copyright 2023 Teodor Kurtev.</Copyright>
     <PackageTags>extensions helpers</PackageTags>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
