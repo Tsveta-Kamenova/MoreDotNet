@@ -26,7 +26,7 @@ jobs:
       run: dotnet build --no-restore
 
     - name: Test
-      run: dotnet test --logger "trx" /p:CollectCoverage=true /p:CoverletOutputFormat=lcov
+      run: dotnet test --logger "trx" /p:CollectCoverage=true /p:CoverletOutputFormat=lcov /p:CoverletOutput=TestResults/
 
     - name: Upload Test Results
       uses: actions/upload-artifact@v2
@@ -39,4 +39,4 @@ jobs:
       uses: coverallsapp/github-action@master
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
-        path-to-lcov: './test/MoreDotNet.Test/coverage.net8.0.info'
+        path-to-lcov: './test/MoreDotNet.Test/coverage.info'
