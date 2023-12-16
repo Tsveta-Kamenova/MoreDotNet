@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.0.3"></a>
+## [2.0.3](https://www.github.com/Teodor92/MoreDotNet/releases/tag/v2.0.3) (2023-12-16)
+
+### Bug Fixes
+
+* issue around git hooks not executing properly ([5ea11be](https://www.github.com/Teodor92/MoreDotNet/commit/5ea11be7b6bd60a27f35152b545789154e6396bf))
+* issues with file encodings and added an additional code coverage package ([517970a](https://www.github.com/Teodor92/MoreDotNet/commit/517970a2ea24ce77b8dbdc53744481157e9a6258))
+
 <a name="2.0.2"></a>
 ## [2.0.2](https://www.github.com/Teodor92/MoreDotNet/releases/tag/v2.0.2) (2023-12-16)
 
