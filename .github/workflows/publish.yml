@@ -23,7 +23,7 @@ jobs:
 
       - name: Versionize Release
         id: versionize
-        run: --workingDir "src/MoreDotNet" --changelog-all --exit-insignificant-commits
+        run: versionize --workingDir "src/MoreDotNet" --changelog-all --exit-insignificant-commits
         continue-on-error: true
 
       - name: No release required
