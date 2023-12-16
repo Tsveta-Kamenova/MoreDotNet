@@ -10,6 +10,8 @@
     <PackageReleaseNotes>Version 0.7 drops some APIs in order to be .NET Standard compliant. Please see the projects GitHub page for more info.</PackageReleaseNotes>
     <Copyright>Code by Teodor Kurtev. Copyright 2023 Teodor Kurtev.</Copyright>
     <PackageTags>extensions helpers</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
