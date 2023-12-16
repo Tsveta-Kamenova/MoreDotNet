@@ -3,7 +3,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <CodeAnalysisRuleSet>..\..\visual-studio-analyzers.ruleset</CodeAnalysisRuleSet>
     <PackageId>MoreDotNet</PackageId>
-    <PackageVersion>1.0.0</PackageVersion>
+    <PackageVersion>2.0.0</PackageVersion>
     <Authors>Teodor Kurtev</Authors>
     <Description>A combination of helpful extension methods.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
