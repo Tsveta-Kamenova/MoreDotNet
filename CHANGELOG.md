@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.0.4"></a>
+## [2.0.4](https://www.github.com/Teodor92/MoreDotNet/releases/tag/v2.0.4) (2023-12-16)
+
+### Bug Fixes
+
+* added code coverage badge ([fcb288e](https://www.github.com/Teodor92/MoreDotNet/commit/fcb288ecc098e1a9dc03eb33e756aebf971dbe46))
+
+### Other
+
+* added code coverage reporting ([3869f69](https://www.github.com/Teodor92/MoreDotNet/commit/3869f699b9b86f9478ddd0ea4a67469f3c6293f3))
+* change the path to the coverage info file ([cd65ff9](https://www.github.com/Teodor92/MoreDotNet/commit/cd65ff975248d1ead88ea9fb1a6844d965c8246a))
+* change the path to the coverage info file ([e98cba5](https://www.github.com/Teodor92/MoreDotNet/commit/e98cba50242f3a4390ed86e6e06758b202a77927))
+* fixing incorrect path in ci config ([fe2cde1](https://www.github.com/Teodor92/MoreDotNet/commit/fe2cde1461abb77f22853f8ec94d7c9d466faecc))
+
+<a name="2.0.3"></a>
+## [2.0.3](https://www.github.com/Teodor92/MoreDotNet/releases/tag/v2.0.3) (2023-12-16)
+
+### Bug Fixes
+
+* issue around git hooks not executing properly ([5ea11be](https://www.github.com/Teodor92/MoreDotNet/commit/5ea11be7b6bd60a27f35152b545789154e6396bf))
+* issues with file encodings and added an additional code coverage package ([517970a](https://www.github.com/Teodor92/MoreDotNet/commit/517970a2ea24ce77b8dbdc53744481157e9a6258))
+
 <a name="2.0.2"></a>
 ## [2.0.2](https://www.github.com/Teodor92/MoreDotNet/releases/tag/v2.0.2) (2023-12-16)
 

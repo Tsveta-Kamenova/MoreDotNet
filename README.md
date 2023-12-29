@@ -4,6 +4,8 @@
 
 [![NuGet version](https://badge.fury.io/nu/MoreDotNet.svg)](https://badge.fury.io/nu/MoreDotNet)
 
+[![Coverage Status](https://coveralls.io/repos/github/Teodor92/MoreDotNet/badge.svg?branch=master)](https://coveralls.io/github/Teodor92/MoreDotNet?branch=master)
+
 ## Summary
 
 This project is a collection of handy extension methods for the .NET Framework. The functionality of this package can be separated in the following groups:

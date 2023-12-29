@@ -1,4 +1,4 @@
-namespace MoreDotNet.Test.Extensions.Common.RandomExtensions
+﻿namespace MoreDotNet.Test.Extensions.Common.RandomExtensions
 {
     using System;
 
