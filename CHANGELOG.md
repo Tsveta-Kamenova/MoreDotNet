@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.1.0"></a>
+## [2.1.0](https://www.github.com/Teodor92/MoreDotNet/releases/tag/v2.1.0) (2023-12-29)
+
+### Features
+
+* enabled old commented out extensions now that we are using dotnet 6 plus ([13530f1](https://www.github.com/Teodor92/MoreDotNet/commit/13530f170adb3ae406e717b6713de90b9c9fcb49))
+
+### Other
+
+* Merge branch 'master' of github.com:Teodor92/MoreDotNet ([b5dd05e](https://www.github.com/Teodor92/MoreDotNet/commit/b5dd05e3798b4ab2acfb9f1fa1b22466c759f448))
+
 <a name="2.0.4"></a>
 ## [2.0.4](https://www.github.com/Teodor92/MoreDotNet/releases/tag/v2.0.4) (2023-12-16)
 
