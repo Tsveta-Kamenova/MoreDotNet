@@ -34,5 +34,14 @@
             ICollection<int> input = new HashSet<int> { 1, 2, 3, 4, 5 };
             Assert.Throws<ArgumentNullException>(() => input.AddRange(null));
         }
+
+        [Fact]
+        public void AddRange_AddToEmptyCollection_ShouldResultInSameItems()
+        {
+            ICollection<int> expected = new HashSet<int> { 1, 2, 3, 4, 5 };
+            ICollection<int> input = new HashSet<int>();
+            input.AddRange(1, 2, 3, 4, 5);
+            Assert.Equal(expected, input);
+        }
     }
 }
