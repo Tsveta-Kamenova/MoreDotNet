@@ -43,5 +43,34 @@
             input.AddRange(1, 2, 3, 4, 5);
             Assert.Equal(expected, input);
         }
+
+        [Fact]
+        public void AddRange_AddMultipleTimes_ShouldNotDuplicateItems()
+        {
+            ICollection<int> expected = new HashSet<int> { 1, 2, 3, 4, 5 };
+            ICollection<int> input = new HashSet<int> { 1 };
+            input.AddRange(2, 3);
+            input.AddRange(4, 5);
+            Assert.Equal(expected, input);
+        }
+
+        [Fact]
+        public void AddRange_AddToNonEmptyCollection_ShouldAppendItems()
+        {
+            ICollection<int> expected = new HashSet<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            ICollection<int> input = new HashSet<int> { 1, 2, 3, 4, 5 };
+            input.AddRange(6, 7, 8, 9);
+            Assert.Equal(expected, input);
+        }
+
+        [Fact]
+        public void AddRange_AddMultipleTypes_ShouldHandleCorrectly()
+        {
+            ICollection<object> expected = new HashSet<object> { 1, "two", 3.0, '4' };
+            ICollection<object> input = new HashSet<object> { 1 };
+            IEnumerable<object> itemsToAdd = new List<object> { "two", 3.0, '4' };
+            input.AddRange(itemsToAdd);
+            Assert.Equal(expected, input);
+        }
     }
 }
