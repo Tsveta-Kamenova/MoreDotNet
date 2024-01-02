@@ -2,9 +2,8 @@
 {
     using System;
     using System.Collections.Generic;
-
+    using System.Linq;
     using MoreDotNet.Extensions.Collections;
-
     using Xunit;
 
     public class ToStringTests
@@ -78,5 +77,42 @@
                     var actual = input.ToString(null, seperator);
                 });
         }
+
+        [Fact]
+        public void ToString_EmptyEnumerableGiven_ShouldReturnEmptyString()
+        {
+            IEnumerable<string> emptyEnumerable = Enumerable.Empty<string>();
+
+            // Act
+            var actual = emptyEnumerable.ToString(",");
+
+            // Assert
+            Assert.Equal(string.Empty, actual);
+        }
+
+        [Fact]
+        public void ToString_NonEmptyEnumerableAndEmptySeparatorGiven_ShouldReturnConcatenatedString()
+        {
+            IEnumerable<string> nonEmptyEnumerable = new[] { "one", "two", "three" };
+
+            // Act
+            var actual = nonEmptyEnumerable.ToString(string.Empty);
+
+            // Assert
+            Assert.Equal("onetwothree", actual);
+        }
+
+        [Fact]
+        public void ToString_NonStringEnumerableGiven_ShouldConvertToStringsWithDefaultSeparator()
+        {
+            IEnumerable<int> nonStringEnumerable = new[] { 1, 2, 3 };
+
+            // Act
+            var actual = nonStringEnumerable.ToString();
+
+            // Assert
+            Assert.Equal("1,2,3", actual);
+        }
+
     }
 }
