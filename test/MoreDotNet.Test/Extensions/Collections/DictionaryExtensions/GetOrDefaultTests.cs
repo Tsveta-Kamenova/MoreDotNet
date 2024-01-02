@@ -1,5 +1,6 @@
 ﻿namespace MoreDotNet.Test.Extensions.Collections.DictionaryExtensions
 {
+    using System;
     using System.Collections.Generic;
 
     using MoreDotNet.Extensions.Collections;
@@ -8,15 +9,15 @@
 
     public class GetOrDefaultTests
     {
-        private readonly IDictionary<string, int> testDictionary;
+        private readonly IDictionary<string, int?> testDictionary;
 
         public GetOrDefaultTests()
         {
-            this.testDictionary = new Dictionary<string, int>();
+            this.testDictionary = new Dictionary<string, int?>();
         }
 
         [Fact]
-        public void GetOrDefault_ExistingKeyGiven_ShouldRetrunValue()
+        public void GetOrDefault_ExistingKeyGiven_ShouldReturnValue()
         {
             const string TestKeyName = "testKey";
 
@@ -28,21 +29,37 @@
         }
 
         [Fact]
-        public void GetOrDefault_NonExistingKeyGiven_ShouldRetrunDefaultValueIfNothingElseIsSpecified()
+        public void GetOrDefault_NonExistingKeyGiven_ShouldReturnDefaultValueIfNothingElseIsSpecified()
         {
-            var expected = default(int);
+            var expected = default(int?);
             var actual = this.testDictionary.GetOrDefault("FakeKey");
 
             Assert.Equal(expected, actual);
         }
 
         [Fact]
-        public void GetOrDefault_NonExistingKeyGiven_ShouldRetrunSpecifiedValue()
+        public void GetOrDefault_NonExistingKeyGiven_ShouldReturnSpecifiedValue()
         {
             var expected = 66;
             var actual = this.testDictionary.GetOrDefault("FakeKey", 66);
 
             Assert.Equal(expected, actual);
         }
+
+
+        [Fact]
+        public void GetOrDefault_NullDictionaryGiven_ShouldThrowArgumentNullException()
+        {
+            IDictionary<string, int> nullDictionary = null;
+            Assert.Throws<ArgumentNullException>(() => nullDictionary.GetOrDefault("Key"));
+        }
+
+        [Fact]
+        public void GetOrDefault_KeyWithNullValue_ShouldReturnNull()
+        {
+            this.testDictionary.Add("NullKey", null);
+            Assert.Null(this.testDictionary.GetOrDefault("NullKey"));
+        }
+
     }
 }
