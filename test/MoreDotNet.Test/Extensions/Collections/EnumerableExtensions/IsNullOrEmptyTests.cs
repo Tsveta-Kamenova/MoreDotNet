@@ -1,5 +1,6 @@
 ﻿namespace MoreDotNet.Test.Extensions.Collections.EnumerableExtensions
 {
+    using System.Collections.Generic;
     using MoreDotNet.Extensions.Collections;
 
     using Xunit;
@@ -29,5 +30,18 @@
             var actual = input.IsNullOrEmpty();
             Assert.True(actual);
         }
+
+        [Fact]
+        public void IsNullOrEmpty_CollectionWithNullElementsGiven_ShouldReturnFalse()
+        {
+            IEnumerable<string> collectionWithNullElements = new[] { "one", null, "three" };
+
+            // Act
+            var actual = collectionWithNullElements.IsNullOrEmpty();
+
+            // Assert
+            Assert.False(actual);
+        }
+
     }
 }
