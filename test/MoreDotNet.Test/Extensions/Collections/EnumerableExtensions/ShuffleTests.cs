@@ -11,7 +11,7 @@
     public class ShuffleTests
     {
         [Fact]
-        public void Shuffle_NonEmtpyEnumerableGiven_ShouldShuffle()
+        public void Shuffle_NonEmptyEnumerableGiven_ShouldShuffle()
         {
             var input = Enumerable.Range(1, 100).ToArray();
             var actual = input.Shuffle();
@@ -49,6 +49,31 @@
         {
             IEnumerable<int> nullEnumerable = new[] { 1, 2, 3 };
             Assert.Throws<ArgumentNullException>(() => nullEnumerable.Shuffle(null));
+        }
+
+        [Fact]
+        public void Shuffle_EmptyEnumerableGiven_ShouldReturnEmptyEnumerable()
+        {
+            IEnumerable<int> emptyEnumerable = Enumerable.Empty<int>();
+
+            // Act
+            var actual = emptyEnumerable.Shuffle();
+
+            // Assert
+            Assert.Empty(actual);
+        }
+
+        [Fact]
+        public void Shuffle_SingleElementEnumerableGiven_ShouldReturnSameEnumerable()
+        {
+            IEnumerable<int> singleElementEnumerable = new[] { 42 };
+
+            // Act
+            var actual = singleElementEnumerable.Shuffle();
+
+            // Assert
+            Assert.Single(actual);
+            Assert.Contains(42, actual);
         }
     }
 }
